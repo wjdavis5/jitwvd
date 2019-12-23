@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "57ffca71-d6a8-4e13-b9e8-564fb14b8bdf",
+		"name": "AzureVM Manager App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetVms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7071/api/GetVms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"GetVms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShutDownVm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"ResourceGroup\": \"AWSLINKEDRG\",\r\n    \"Id\": \"/subscriptions/ae256f9e-7ab0-4fa0-b917-11d299a6f414/resourceGroups/AWSLINKEDRG/providers/Microsoft.Compute/virtualMachines/SCGWvd-0\",\r\n    \"ComputerName\": \"SCGWvd-0\",\r\n    \"CurrentState\": \"PowerState/running\"\r\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/PowerOffVm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"PowerOffVm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StartVm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"ResourceGroup\": \"AWSLINKEDRG\",\r\n    \"Id\": \"/subscriptions/ae256f9e-7ab0-4fa0-b917-11d299a6f414/resourceGroups/AWSLINKEDRG/providers/Microsoft.Compute/virtualMachines/SCGWvd-0\",\r\n    \"ComputerName\": \"SCGWvd-0\",\r\n    \"CurrentState\": \"PowerState/running\"\r\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/PowerOnVm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"PowerOnVm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
